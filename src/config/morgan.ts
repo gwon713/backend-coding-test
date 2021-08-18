@@ -11,6 +11,6 @@ const stream: StreamOptions = { // morgan log 출력 설정 winston logger 사�
 };
 
 
-const morganMiddleware = morgan( morganFormat,{ stream });
+const morganMiddleware = morgan( morganFormat,{ stream }); // morgan use setting
 
 export default morganMiddleware;
