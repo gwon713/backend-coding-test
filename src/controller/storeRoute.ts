@@ -118,8 +118,6 @@ storeRouter.get('/store/:postcode/arround', async(req:Request, res: Response)=>{
             let storeResult = storeData.filter((store_item: Store)=>{// Store Data의 postcode와 Array_geoResult의 postcode 부합한 Store Data의 Array<Object> return
                 return Array_geoResult.find((geo_item: {postcode: String, longitude: Number, latitude: Number})=>{ // Store Data의 postcode와 Array_geoResult의 postcode 부합합 데이터를 return   
                     if(store_item.getPostcode()===geo_item.postcode){ // Store Data의 postcode와 Array_geoResult의 postcode 부합한 Store를 return 
-                        console.log(geo_item);
-                        console.log(store_item);
                         return store_item.getName(); // 해당하는 Item 반환
                     }
                 });
